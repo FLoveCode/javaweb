@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title>[ 大学生网上格子铺 ]</title>
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/my/tips.css">
+  <![endif]-->
+<link rel="stylesheet" href="css/uikit.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/loginandregister.css"/>
+
+<!-- 登录事件 -->
+<script src="js/Login.js"></script>
+
+<!-- 注册事件 -->
+<script src="js/Register.js"></script>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.zlight.menu.1.0.min.js"></script>
+<script src="js/uikit.min.js"></script>
+<script src="js/banner.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('#nav').zlightMenu();
+	});
+</script>
+</head>
+<!--登录框-->
+   <div id="logincontainer">
+    <div class="login">
+   <div class="loginh1">
+      <h1>大学生格子铺登录</h1>
+ 	<a href="#" onclick="closeLogin()">关闭</a>
+	</div>
+      <form method="post" action="">
+      
+        <p>
+       	 	<input type="text"  id="username"  placeholder="用户名">
+        </p>
+        <p>
+        	<input type="password"  id="password"  placeholder="密码">
+        </p>
+        
+        <p class="iden">
+          <label>
+            <input type="radio" name="identity" value="1" checked="checked" >用户
+            <input type="radio" name="identity" value="2">商家
+            <input type="radio" name="identity" value="3"> 管理员
+          </label>
+        </p>
+        
+        <p class="submit">
+        	<input type="button" name="commit" value="登录" onclick="SendLoginRequest()">
+        </p>
+        <p class="login-help"> 
+        	<a href="#">忘记密码?</a>.
+        </p>
+
+      </form>
+    </div>
+
+</div>
+<!--注册框-->
+ <div id="registercontainer">
+    <div class="register">
+   		<div class="registerh1">
+    	  <h1>注册</h1>	<a href="#" onclick="closeRegister()">关闭</a>
+   	 	</div>
+      <form method="post" action="">
+        <p>账号<input type="text"   id="Ruserid" ></p>
+        <p>密码<input type="password" id="Ruserpwd" > </p>
+        <p >确认密码<input type="password"  id="confim" style="margin-left:17px"> </p>
+        <p>姓名 <input type="text"  id="Rusername"></p>
+
+        <p >手机号码<input id="Rusertele" type="text" style="margin-left:17px"> </p>
+        
+        <p style="margin-left:18px;text-align:left;">性别
+        	<select id="select_sex" class="sex" style="width:200px; text-align:center;">
+        		<option>保密</option>
+        		<option>男</option>
+               	<option>女</option>
+             </select>
+        </p>
+         <p style="margin-left:18px;text-align:left;">身份
+        	<select id="select_identity" class="identity" style="width:200px;text-align:center;">
+        		<option>用户</option>
+               	<option>商家</option>
+             </select>
+        </p>
+
+       <p class="submit"><input type="button" value="注册" onclick="CreateRegisterParamter()"></p>
+           
+      </form>
+    </div>
+
+</div>
+
+<body>
+
+
+<div id="header">
+  <div id="header-top">
+    <ul>
+      <li>您好，欢迎光临本店！ </li>
+      <li id="login_li" class="loginhead" onclick="openLogin();"><a href="#">[ 登录 ]</a></li>
+      <li class="loginhead" onclick="openRegister();"><a href="#">[ 免费注册 ]</a></li>
+      <li>|</li>
+
+      <li>|</li>
+      <li><a href="javascript:void(0)">帮助</a></li>
+      <li>|</li>
+      <li><a href="javascript:void(0)">联系我们</a></li>
+    </ul>
+  </div>
+  <div class="banner"> <img src="images/logo.png"/>
+  </div>
+
+
+  <div id="nav" class="nav">
+    <div class="nav-content"> 
+        <a href="javascript:void(0)" class="active nav-first">首页</a> 
+        <a href="javascript:void(0)">格子招租</a> 
+        <a href="javascript:void(0)">格子购物</a> 
+        <a href="javascript:void(0)">快递取件</a> 
+        <a href="javascript:void(0)">二手甩卖</a> 
+        <a href="javascript:void(0)">爱心捐献</a> 
+        <a href="javascript:void(0)">消息驿站</a> 
+        <a href="javascript:void(0)">我的购物车</a> 
+        <a href="javascript:void(0)">我的格子铺</a> 
+    </div>
+  </div>
+</div>
+
+  <div class="search uk-hidden-small ">
+    <form class="uk-form uk-margin-remove ">
+        <input type="text" style="width:600px;"placeholder="Search">
+        <button class="uk-button uk-button-primary">搜索</button>
+    </form>
+  </div>
+
+
+
+  <ul class="da4-list">
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/item1.jpg" /></div>
+        <div class="item-description">
+            <h3>书籍资料</h3>
+            <span>BOOKS & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/huaban.jpg" /></div>
+        <div class="item-description">
+            <h3>单车滑板</h3>
+            <span>BIKE\SKATEBOARD & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/appliance.jpg" /></div>
+        <div class="item-description">
+            <h3>生活电器</h3>
+            <span>APPLIANCE & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/sports.jpg" /></div>
+        <div class="item-description">
+            <h3>运动器材</h3>
+            <span>SPORTS & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/food.jpg" /></div>
+        <div class="item-description">
+            <h3>吃货必备</h3>
+            <span>FOOD & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/digital.jpg" /></div>
+        <div class="item-description">
+            <h3>数码专区</h3>
+            <span>DIGITAL & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/computer.jpg" /></div>
+        <div class="item-description">
+            <h3>电脑专区</h3>
+            <span>COMPUTER & DATA</span>
+        </div>
+    </a>
+    </li>
+    <li class="list-item">
+    <a href="javascript:void(0)">
+        <div class="item-album"><img src="images/others.jpg" /></div>
+        <div class="item-description">
+            <h3>杂七杂八</h3>
+            <span>OTHERS & DATA</span>
+        </div>
+    </a>
+    </li>
+  </ul>
+  <div class="content-end">
+  	<a href="javascript:void(0)">上一页</a>
+    <a href="javascript:void(0)">下一页</a>
+  </div>
+</div>
+<div class="footer">
+	<ul>
+        <li>友情链接：</li>
+        <li><a href="http://www.zhaodamall.com/">肇大商城</a></li>
+        <li><a href="http://www.zqu.edu.cn/">肇庆学院官网</a></li>  
+        <li><a href="http://www.taobao.com/">淘宝网</a></li>  
+        <li><a href="http://gz.jumei.com/">聚美优品</a></li> 
+    	<li><a href="javascript:void(0)">关于我们</a></li>
+        <li>|</li>
+        <li><a href="javascript:void(0)">联系我们</a></li>
+        <li>|</li>
+        <li><a href="javascript:void(0)">加入我们</a></li>
+        <li>|</li>
+        <li><a href="javascript:void(0)">团队情况</a></li>
+   </ul>
+ 
+   <p>Copyright &copy; 黄子芳 冯志宝 洪佳桂 黄志康</p>
+</div>
+</body>
+</html>
