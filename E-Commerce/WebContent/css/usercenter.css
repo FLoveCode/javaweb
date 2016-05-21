@@ -1,0 +1,70 @@
+/* CSS Document */
+body,head{margin:0;padding:0;}
+body{
+	text-align:center;
+}
+/* ----------标题栏----------- */
+.head {
+	text-align:center;
+	background-color: #ffcc00;
+	width: 100%;
+	height:auto;
+}
+.navigation{
+	text-align:center;
+	text-decoration:none;
+	height:auto;
+	width:100px;
+}
+/* ----------导航栏----------- */
+.nav{
+	width:100%;
+	height:50px;
+	background:#211711;
+	font-size:14px;
+	z-index:9999;
+}
+.nav-content{
+	width:465px;
+	margin:auto;
+}
+.nav-content a{
+	float:left;
+	width:110px;
+	height:20px;
+	line-height:20px;
+	margin-top:15px;
+	text-align:center;
+	color:#b5a486;
+	text-decoration:none;
+	/*border-right:1px solid #6A5F4B;*/
+}
+.nav-content a:hover{	
+	color:#ffebc8;
+	/*background:#000;*/
+	text-decoration:none;
+}
+.nav-content .active{
+	color:#ffebc8;
+	/*background:#000;*/
+}
+/* ----------个人信息栏----------- */
+/*.usermessage{
+	text-align:center;
+	width:600px;
+}*/
+.usermessage{
+	width:400px;
+	margin:0 auto;
+}
+.usermessage1{
+	float:left;
+	left:300px;
+	width:200px;
+	margin:auto;
+}
+.usermessage2{
+	float:left;
+	width:200px;
+	margin:auto;
+}
