@@ -116,6 +116,7 @@ public class DoLogin extends HttpServlet {
 			json.put("status", status);
 			json.put("detail", detail);
 			json.put("message", js);
+			System.out.println(json.toString());
 			out.println(json.toString());
 			db.closeAll();
 //			if(choose.equals("1")){

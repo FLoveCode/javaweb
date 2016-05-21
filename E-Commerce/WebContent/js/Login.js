@@ -60,6 +60,8 @@ function SendLoginRequest(){
 //解析登录请求
 function parseLoginRequest(){
 	
+	
+	
 	if(request.status==200&&request.readyState==4){
 //		alert(request.responseText);
 		

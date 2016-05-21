@@ -63,34 +63,41 @@
 
 </div>
 <!--注册框-->
+ <!--注册框-->
  <div id="registercontainer">
     <div class="register">
    		<div class="registerh1">
     	  <h1>注册</h1>	<a href="#" onclick="closeRegister()">关闭</a>
    	 	</div>
       <form method="post" action="">
-        <p>账号<input type="text"   id="Ruserid" ></p>
+        <p>账号<input type="text"   id="Rusername" onblur="CheckName()"></p>
         <p>密码<input type="password" id="Ruserpwd" > </p>
-        <p >确认密码<input type="password"  id="confim" style="margin-left:17px"> </p>
-        <p>姓名 <input type="text"  id="Rusername"></p>
+        <p >确认密码<input type="password"  id="pwd_confirm" style="margin-left:17px" onblur="CheckPassword()"> </p>
 
-        <p >手机号码<input id="Rusertele" type="text" style="margin-left:17px"> </p>
+        <p >手机号码<input id="Rusertele" type="text" style="margin-left:17px" 
+        onKeyUp="value=value.replace(/\D/g,'')" 
+        onafterpaste="value=value.replace(/\D/g,'')"
+        onblur="CheckTele()"
+        > 
+        </p>
         
         <p style="margin-left:18px;text-align:left;">性别
         	<select id="select_sex" class="sex" style="width:200px; text-align:center;">
-        		<option>保密</option>
-        		<option>男</option>
-               	<option>女</option>
+        		<option value="3">保密</option>
+        		<option value="1">男</option>
+               	<option value="2">女</option>
              </select>
         </p>
          <p style="margin-left:18px;text-align:left;">身份
         	<select id="select_identity" class="identity" style="width:200px;text-align:center;">
-        		<option>用户</option>
-               	<option>商家</option>
+        		<option value="1">用户</option>
+               	<option value="2">商家</option>
              </select>
         </p>
 
-       <p class="submit"><input type="button" value="注册" onclick="CreateRegisterParamter()"></p>
+       <p class="submit">
+       <input id="bn_register" type="button" value="注册" onclick="CreateRegisterParamter()">
+       </p>
            
       </form>
     </div>

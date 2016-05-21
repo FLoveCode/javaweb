@@ -46,11 +46,11 @@ public class DoCusRegister extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
-		String cusname="hzk";//request.getParameter("cusname");
-		String cuspassword="123456";//request.getParameter("cuspassword");
-		String cussex="1";//request.getParameter("cussex");
+		String cusname=request.getParameter("cusname");//"hzk"
+		String cuspassword=request.getParameter("cuspassword");//="123456";
+		String cussex=request.getParameter("cussex");//"1";
 		String cusyear=null;//request.getParameter("cusyear");
-		String custele="18898874867";//request.getParameter("custele");
+		String custele=request.getParameter("custele");//"18898874867";
 		String[] params = new String[]{cusname,cuspassword,cussex,cusyear,custele};
 		
 		DBO db = new DBO();
