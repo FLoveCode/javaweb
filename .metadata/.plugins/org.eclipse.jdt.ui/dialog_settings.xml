@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\apache-tomcat-7.0.57-windows-x64\apache-tomcat-7.0.57\lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<section name="completion_proposal_size">
+	</section>
 	<section name="JavaElementSearchActions">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="3" key="pageIndex"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="3" key="index"/>
 	</section>
 </section>
