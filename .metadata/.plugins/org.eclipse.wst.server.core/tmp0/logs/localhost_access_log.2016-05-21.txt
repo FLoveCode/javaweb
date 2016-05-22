@@ -1,0 +1,12 @@
+127.0.0.1 - - [21/May/2016:23:28:09 +0800] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/May/2016:23:28:11 +0800] "GET /E-Commerce/login.jsp HTTP/1.1" 200 642
+127.0.0.1 - - [21/May/2016:23:28:30 +0800] "POST /E-Commerce/DoLogin HTTP/1.1" 200 73
+127.0.0.1 - - [21/May/2016:23:28:38 +0800] "POST /E-Commerce/DoLogin HTTP/1.1" 200 80
+127.0.0.1 - - [21/May/2016:23:32:20 +0800] "POST /E-Commerce/DoLogin HTTP/1.1" 200 80
+127.0.0.1 - - [21/May/2016:23:32:29 +0800] "GET /E-Commerce/CusSelf HTTP/1.1" 200 147
+127.0.0.1 - - [21/May/2016:23:33:14 +0800] "POST /E-Commerce/CusAlter HTTP/1.1" 200 57
+127.0.0.1 - - [21/May/2016:23:33:18 +0800] "GET /E-Commerce/usercenter.html HTTP/1.1" 200 2445
+127.0.0.1 - - [21/May/2016:23:33:18 +0800] "GET /E-Commerce/css/usercenter.css HTTP/1.1" 200 1136
+127.0.0.1 - - [21/May/2016:23:33:18 +0800] "GET /E-Commerce/js/jquery-1.9.1.min.js HTTP/1.1" 200 92629
+127.0.0.1 - - [21/May/2016:23:33:18 +0800] "GET /E-Commerce/js/cusmessager.js HTTP/1.1" 200 2458
+127.0.0.1 - - [21/May/2016:23:33:19 +0800] "GET /E-Commerce/CusSelf HTTP/1.1" 200 147
